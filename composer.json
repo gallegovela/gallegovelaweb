@@ -1,0 +1,28 @@
+{
+    "name": "gallegovela/web",
+    "type": "project",
+    "require": {
+        "composer/installers": "^2.0",
+        "wpackagist-plugin/google-site-kit": "^1.0",
+        "wpackagist-plugin/contact-form-7": "^5.0",
+        "wpackagist-plugin/wp-mail-smtp": "^4.0",
+        "wpackagist-plugin/wordpress-seo": "^23.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
