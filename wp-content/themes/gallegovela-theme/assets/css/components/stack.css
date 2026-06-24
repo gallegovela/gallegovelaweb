@@ -4,70 +4,171 @@
 	padding: var(--gv-space-4) 0;
 }
 
-.gv-stack__timeline {
-	position: relative;
-	padding-left: var(--gv-space-3);
-	border-left: 2px solid rgba(255, 255, 255, 0.15);
-	display: flex;
-	flex-direction: column;
-	gap: var(--gv-space-3);
-	list-style: none;
-	margin: 0;
-	padding-top: 0;
+
+.gv-process {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.gv-process::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: rgba(255,255,255,0.12);
+}
+
+.gv-step {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 90px;
+}
+
+.gv-step:last-child {
+    margin-bottom: 0;
+}
+
+.gv-step::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #111;
+    border: 2px solid #2f80ed;
+    z-index: 2;
+}
+
+.gv-step:hover::before {
+    width: 30px;
+    height: 30px;
+    left: 15px;
+    top: 15px;
+    background: #2f80ed;
+    box-shadow: 0 0 20px rgba(47,128,237,0.5);
 }
 
 .gv-stack__item {
-	position: relative;
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	border-radius: 20px;
-	padding: var(--gv-space-2) var(--gv-space-3);
-	transition: border-color 0.25s ease;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 35px;
+    transition: all 0.3s ease;
 }
 
 .gv-stack__item:hover {
-	border-color: var(--gv-color-accent);
+    transform: translateY(-4px);
+    border-color: rgba(47,128,237,0.4);
 }
 
-.gv-stack__item::before {
-	content: '';
-	position: absolute;
-	left: calc(-1 * var(--gv-space-3) - 5px);
-	top: calc(var(--gv-space-2) + 6px);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: var(--gv-color-accent);
+.gv-step-number {
+    display: inline-block;
+    color: #2f80ed;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.gv-stack__num {
-	display: block;
-	font-family: var(--gv-font-heading);
-	font-size: 0.75rem;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
-	color: var(--gv-color-accent);
-	margin-bottom: 0.25rem;
+.gv-stack__item h3 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.gv-stack__title {
-	color: var(--gv-color-text-on-dark);
-	margin-bottom: var(--gv-space-1);
+.gv-stack__item .subtitle {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-.gv-stack__desc {
-	color: var(--gv-color-text-muted-on-dark);
-	margin-bottom: var(--gv-space-1);
+.gv-stack__item p {
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-.gv-stack__tags {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--gv-space-1);
+.gv-ai {
+    background: rgba(47,128,237,0.08);
+    border-left: 3px solid #2f80ed;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
 }
 
-.gv-stack .gv-badge {
-	background: rgba(255, 255, 255, 0.08);
-	border-color: rgba(255, 255, 255, 0.15);
-	color: var(--gv-color-text-on-dark);
+.gv-ai-title {
+    color: #2f80ed;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
+
+.gv-ai p {
+    margin: 0;
+}
+
+.gv-groups {
+    display: grid;
+    gap: 20px;
+}
+
+.gv-group-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gv-tag {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.85);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .gv-process::before {
+        left: 18px;
+    }
+
+    .gv-step {
+        padding-left: 60px;
+    }
+
+    .gv-step::before {
+        left: 6px;
+    }
+
+    .gv-step:hover::before {
+        left: 3px;
+    }
+
+    .gv-stack__item {
+        padding: 25px;
+    }
+
+    .gv-stack__item h3 {
+        font-size: 24px;
+    }
+}
+
+
+
