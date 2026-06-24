@@ -1,0 +1,138 @@
+body {
+	font-family: var(--gv-font-body);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--gv-font-heading);
+	margin: 0 0 var(--gv-space-1);
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h3 {
+	font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+p {
+	margin: 0 0 var(--gv-space-2);
+	color: var(--gv-color-text-muted);
+}
+
+/*
+ * Cabecera de sección (Home): sobretítulo + título + explicación.
+ * Clases reutilizables en todas las secciones; el marcado que las usa
+ * se prepara más tarde.
+ */
+.gv-section-eyebrow {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--gv-color-accent);
+	margin-bottom: var(--gv-space-1);
+}
+
+.gv-section-title {
+	font-size: clamp(1.5rem, 3vw, 2.25rem);
+	margin-bottom: var(--gv-space-1);
+}
+
+.gv-section-explanation {
+	max-width: 60ch;
+	color: var(--gv-color-text-muted);
+	margin-bottom: var(--gv-space-3);
+}
+
+/* Cabecera de sección: sobretítulo + título (izquierda ≤50%) + texto/enlace (derecha ≤50%) */
+.gv-section-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--gv-space-3);
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-section-header__left {
+	max-width: 50%;
+}
+
+.gv-section-header__right {
+	max-width: 50%;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.home-section-overtitle {
+	display: block;
+	font-family: var(--gv-font-body);
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--gv-color-accent);
+	margin: 0 0 var(--gv-space-1);
+}
+
+.home-section-title {
+	font-family: var(--gv-font-heading);
+	font-size: clamp(1.5rem, 3vw, 2.25rem);
+	font-weight: 800;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.gv-section-header__text {
+	color: var(--gv-color-text-muted);
+	margin: 0;
+	font-size: 0.95rem;
+}
+
+.gv-section-header__link {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--gv-color-accent);
+	text-decoration: none;
+}
+
+.gv-section-header__link:hover {
+	text-decoration: underline;
+}
+
+.gv-section-header--dark .home-section-overtitle {
+	color: var(--gv-color-text-muted-on-dark);
+}
+
+.gv-section-header--dark .home-section-title {
+	color: var(--gv-color-text-on-dark);
+}
+
+.gv-section-header--dark .gv-section-header__text {
+	color: var(--gv-color-text-muted-on-dark);
+}
+
+.gv-section-header--dark .gv-section-header__link {
+	color: var(--gv-color-text-on-dark);
+}
+
+@media (max-width: 699px) {
+	.gv-section-header {
+		flex-direction: column;
+	}
+
+	.gv-section-header__left,
+	.gv-section-header__right {
+		max-width: 100%;
+		text-align: left;
+		align-items: flex-start;
+	}
+}

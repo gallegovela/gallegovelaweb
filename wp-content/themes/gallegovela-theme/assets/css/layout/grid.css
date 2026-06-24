@@ -1,0 +1,7 @@
+.gv-container {
+	width: 100%;
+	max-width: var(--gv-container-width);
+	margin: 0 auto;
+	padding-left: var(--gv-container-padding);
+	padding-right: var(--gv-container-padding);
+}

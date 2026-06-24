@@ -1,0 +1,28 @@
+:root {
+	--gv-color-text: #1a1d23;
+	--gv-color-text-muted: #5b6270;
+	--gv-color-bg: #ffffff;
+	--gv-color-bg-alt: #f7f8fa;
+	--gv-color-dark: #11141c;
+	--gv-color-dark-alt: #1b1f2a;
+	--gv-color-text-on-dark: #f2f3f5;
+	--gv-color-text-muted-on-dark: #a7adba;
+	--gv-color-accent: #2f6fed;
+	--gv-color-accent-contrast: #ffffff;
+	--gv-color-border: #e4e6eb;
+
+	--gv-hero-overlay: rgba(255, 255, 255, 0.6);
+
+	--gv-font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	--gv-font-heading: 'Nunito', var(--gv-font-base);
+	--gv-font-body: 'Open Sans', var(--gv-font-base);
+
+	--gv-radius: 12px;
+	--gv-container-width: 1200px;
+	--gv-container-padding: clamp(1.25rem, 4vw, 2.5rem);
+
+	--gv-space-1: clamp(0.5rem, 1vw, 0.75rem);
+	--gv-space-2: clamp(1rem, 2vw, 1.5rem);
+	--gv-space-3: clamp(2rem, 4vw, 3rem);
+	--gv-space-4: clamp(3rem, 6vw, 5rem);
+}

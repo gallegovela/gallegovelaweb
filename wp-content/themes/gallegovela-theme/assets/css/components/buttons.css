@@ -1,0 +1,36 @@
+.gv-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75em 1.5em;
+	border-radius: var(--gv-radius);
+	font-weight: 600;
+	transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.gv-button:hover {
+	opacity: 0.85;
+}
+
+.gv-button--primary {
+	background: var(--gv-color-accent);
+	color: var(--gv-color-accent-contrast);
+}
+
+.gv-button--secondary {
+	background: transparent;
+	color: var(--gv-color-text);
+	border: 1px solid var(--gv-color-border);
+}
+
+.gv-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.35em 0.85em;
+	border-radius: 999px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	background: var(--gv-color-bg-alt);
+	color: var(--gv-color-text-muted);
+	border: 1px solid var(--gv-color-border);
+}

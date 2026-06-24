@@ -4,6 +4,6 @@
 
 # Plugins/temas instalados por Composer (WPackagist): no versionar, se reconstruyen en el build de Docker.
 /wp-content/plugins/*
-!/wp-content/plugins/gallegovela/
+!/wp-content/plugins/gallegovela-projects
 /wp-content/themes/*
-!/wp-content/themes/gallegovela/
+!/wp-content/themes/gallegovela-theme
