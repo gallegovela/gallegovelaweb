@@ -229,21 +229,38 @@ Título: Tecnologías que utilizo para construir soluciones robustas.
 
 Fondo oscuro.
 
-Timeline vertical.
+Timeline vertical con línea continua a la izquierda (`gv-process::before`, 2px,
+rgba(255,255,255,0.12)) y nodo circular por etapa (`.gv-step::before`, 24px,
+borde azul `#2f80ed`). En hover el nodo se expande a 30px y se rellena de azul
+con sombra (`box-shadow: 0 0 20px rgba(47,128,237,0.5)`).
 
 NO utilizar logos.
 
 NO utilizar iconos de herramientas.
 
-Las tecnologías deben representarse mediante badges o tags.
+Las tecnologías deben representarse mediante badges o tags (`.gv-tag`,
+border-radius 999px).
 
-Cada etapa contiene:
+Cuatro etapas definidas en `template-parts/stack-timeline.php`:
 
-- Título
-- Descripción
-- Tags
+- **01 · Descubrimiento y diseño** — Figma, Canva, UML, Workshops, ChatGPT, Gemini, Base44
+- **02 · Desarrollo a medida** — Java, PHP, WordPress, Laravel, Python, Angular, React, MySQL, Oracle Database, MongoDB, Redis, Codex, Claude Code
+- **03 · Plataforma, automatización y cloud** — Azure, AWS, Google Cloud, Docker, Kubernetes, Helm, GitHub, GitHub Actions, Azure DevOps, Terraform, ArgoCD, GitOps, FinOps, Capacity Planning, Infrastructure Forecasting, Codex, Claude Code
+- **04 · Observabilidad y evolución** — Prometheus, Grafana, Datadog, Elasticsearch, Kibana, Azure Monitor, Google Cloud Observability, ChatGPT, Claude
 
-Cada etapa se presenta con borde de 1px, radius de 20px y color rgba(255,255,255,0.08).  En el mouseover sobre la sección, el border cambia a color principal azul.
+Estructura interna de cada etapa (`.gv-stack__item`):
+
+1. `.gv-step-number` — número y nombre de etapa en azul, uppercase, letter-spacing 2px
+2. `h3` — título de la etapa
+3. `.subtitle` — frase resumen de la etapa
+4. `p` — descripción larga
+5. `.gv-ai` — bloque "IA EN ESTA ETAPA" con fondo rgba(47,128,237,0.08) y
+   borde izquierdo 3px azul; explica cómo se usa IA en esa fase
+6. `.gv-groups` > `.gv-group-title` + `.gv-tags` — grupo "Herramientas" con badges
+
+Cada etapa (`.gv-stack__item`) se presenta con borde 1px rgba(255,255,255,0.08),
+radius 20px, fondo rgba(255,255,255,0.03). En hover: `translateY(-4px)` y
+`border-color: rgba(47,128,237,0.4)`.
 
 ---
 
