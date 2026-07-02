@@ -1,0 +1,489 @@
+<!--
+  PÁGINA: SOBRE MÍ
+  ─────────────────────────────────────────────────────────────────
+  Cómo usarlo en WordPress:
+    1. Páginas → Nueva página → título "Sobre mí", slug "sobre-mi"
+    2. Editor → ⋮ → Editor de código (o bloque "HTML personalizado")
+    3. Pegar este fichero completo y publicar
+  ─────────────────────────────────────────────────────────────────
+  Hero: usa el componente "Hero interno" (.gv-page-hero, ver template-parts/hero-interno.php
+  y assets/css/components/hero-interno.css). Imagen: assets/images/hero-about.png
+  CSS cargado automáticamente cuando el slug es "sobre-mi"
+  ─────────────────────────────────────────────────────────────────
+-->
+
+
+<!-- ══════════════════════════════════════════
+     HERO (componente reutilizable "Hero interno", ver template-parts/hero-interno.php)
+     ══════════════════════════════════════════ -->
+<section class="gv-page-hero">
+  <div class="gv-container gv-page-hero__inner">
+
+    <div class="gv-page-hero__content">
+      <p class="gv-section-eyebrow">/ Sobre mí</p>
+      <h1 class="gv-page-hero__title">
+        Ingeniería de software, cloud y automatización con
+        <span class="gv-text-accent">visión de producto y operación</span>.
+      </h1>
+      <p class="gv-page-hero__desc">
+        Trabajo en la intersección entre desarrollo, arquitectura cloud, DevOps e inteligencia artificial aplicada. Me gusta convertir necesidades reales en soluciones robustas, escalables y mantenibles, acompañando el proceso desde la idea inicial hasta la puesta en producción y su evolución.
+      </p>
+      <div class="gv-page-hero__actions">
+        <a class="gv-button gv-button--primary" href="#perfil-profesional">Ver perfil profesional &rarr;</a>
+        <a class="gv-button gv-button--secondary" href="#como-trabajo">Cómo puedo ayudarte &rarr;</a>
+      </div>
+    </div>
+
+    <div class="gv-page-hero__visual" aria-hidden="true">
+      <img
+        src="/wp-content/themes/gallegovela-theme/assets/images/hero-about.png"
+        alt=""
+        loading="eager"
+        width="600"
+        height="500"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     INFORMACIÓN RÁPIDA
+     ══════════════════════════════════════════ -->
+<div class="gv-sm-quickinfo">
+  <div class="gv-container gv-sm-quickinfo__grid">
+
+    <div class="gv-sm-quickinfo__card">
+      <span class="gv-sm-quickinfo__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M32 4a18 18 0 0 1 18 18c0 12-18 38-18 38S14 34 14 22A18 18 0 0 1 32 4Z"/>
+          <circle cx="32" cy="22" r="6"/>
+        </svg>
+      </span>
+      <div class="gv-sm-quickinfo__body">
+        <strong class="gv-sm-quickinfo__label">Ubicación</strong>
+        <span class="gv-sm-quickinfo__value">Don Benito, Badajoz, España</span>
+        <span class="gv-sm-quickinfo__value">Trabajo en remoto</span>
+      </div>
+    </div>
+
+    <div class="gv-sm-quickinfo__card">
+      <span class="gv-sm-quickinfo__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M32 12 6 24l26 12 26-12Z"/>
+          <path d="M16 30v14c0 4 7 8 16 8s16-4 16-8V30"/>
+          <path d="M58 24v14"/>
+        </svg>
+      </span>
+      <div class="gv-sm-quickinfo__body">
+        <strong class="gv-sm-quickinfo__label">Formación</strong>
+        <span class="gv-sm-quickinfo__value">Ingeniería Informática</span>
+        <span class="gv-sm-quickinfo__value">Universidad de Sevilla, 2007</span>
+      </div>
+    </div>
+
+    <div class="gv-sm-quickinfo__card">
+      <span class="gv-sm-quickinfo__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M32 6L8 16v18c0 14 10 24 24 26 14-2 24-12 24-26V16Z"/>
+          <path d="M22 32l7 7 13-13"/>
+        </svg>
+      </span>
+      <div class="gv-sm-quickinfo__body">
+        <strong class="gv-sm-quickinfo__label">Especialidad</strong>
+        <span class="gv-sm-quickinfo__value">Software, Cloud, DevOps</span>
+        <span class="gv-sm-quickinfo__value">e IA aplicada</span>
+      </div>
+    </div>
+
+    <div class="gv-sm-quickinfo__card">
+      <span class="gv-sm-quickinfo__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="8" y="12" width="48" height="30" rx="3"/>
+          <path d="M4 50h56"/>
+          <path d="M22 50l3 4h18l3-4"/>
+        </svg>
+      </span>
+      <div class="gv-sm-quickinfo__body">
+        <strong class="gv-sm-quickinfo__label">Actualmente</strong>
+        <span class="gv-sm-quickinfo__value">Ingeniero DevOps Xebia (2022)</span>
+        <span class="gv-sm-quickinfo__value">Freelance (2019)</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     TARJETAS DE NAVEGACIÓN
+     ══════════════════════════════════════════ -->
+<section class="gv-sm-navcards">
+  <div class="gv-container">
+    <h2 class="gv-sm-navcards__heading">Estoy aquí porque...</h2>
+    <div class="gv-sm-navcards__grid">
+
+      <div class="gv-sm-navcard">
+        <span class="gv-sm-navcard__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+            <circle cx="32" cy="22" r="12"/>
+            <path d="M10 56c0-12 9-20 22-20s22 8 22 20"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-navcard__title">Quiero conocer tu perfil profesional</h3>
+        <p class="gv-sm-navcard__desc">Descubre mi experiencia, trayectoria, stack tecnológico y cómo puedo aportar valor en equipos y organizaciones.</p>
+        <a class="gv-sm-navcard__link" href="#perfil-profesional">Ver perfil profesional &rarr;</a>
+      </div>
+
+      <div class="gv-sm-navcard">
+        <span class="gv-sm-navcard__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true">
+            <path d="M32 8c8 8 12 20 8 34l-8 8-8-8c-4-14 0-26 8-34Z"/>
+            <circle cx="32" cy="26" r="5"/>
+            <path d="M20 46l-8 8M44 46l8 8"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-navcard__title">Busco a alguien para un proyecto</h3>
+        <p class="gv-sm-navcard__desc">Conoce cómo trabajo, qué tipo de soluciones desarrollo y cómo puedo ayudarte a llevar tu proyecto del concepto a la operación.</p>
+        <a class="gv-sm-navcard__link" href="#como-trabajo">Ver cómo trabajo contigo &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PERFIL PROFESIONAL
+     ══════════════════════════════════════════ -->
+<section id="perfil-profesional" class="gv-sm-profile">
+  <div class="gv-container gv-sm-profile__inner">
+
+    <!-- Columna izquierda: resumen y métricas -->
+    <div class="gv-sm-profile__left">
+      <p class="gv-section-eyebrow">/ Perfil profesional</p>
+      <h2 class="gv-section-title">Trayectoria y experiencia</h2>
+      <p class="gv-sm-profile__intro">
+        Más de 15 años acompañando a empresas y equipos en la creación de soluciones digitales robustas, escalables y sostenibles.
+      </p>
+
+      <div class="gv-sm-profile__metrics">
+
+        <div class="gv-sm-metric">
+          <span class="gv-sm-metric__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="32" cy="32" r="26"/>
+              <path d="M32 16v18l10 6"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-sm-metric__value">15+ años</strong>
+            <p class="gv-sm-metric__desc">De experiencia en desarrollo y arquitectura de software</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-metric">
+          <span class="gv-sm-metric__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M32 8 58 22 32 36 6 22Z"/>
+              <path d="M6 32 32 46 58 32"/>
+              <path d="M6 42 32 56 58 42"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-sm-metric__value">100+ proyectos</strong>
+            <p class="gv-sm-metric__desc">Entregados con éxito en diferentes industrias</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-metric">
+          <span class="gv-sm-metric__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="24" cy="20" r="10"/>
+              <path d="M6 54c0-10 7-17 18-17s18 7 18 17"/>
+              <circle cx="46" cy="22" r="8"/>
+              <path d="M38 54c2-8 8-13 16-13"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-sm-metric__value">Equipos multidisciplinares</strong>
+            <p class="gv-sm-metric__desc">Trabajo colaborativo, comunicación clara y foco en resultados</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-metric">
+          <span class="gv-sm-metric__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M32 10C22 10 14 14 14 14v36s8-4 18-4 18 4 18 4V14s-8-4-18-4Z"/>
+              <path d="M32 10v36"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-sm-metric__value">Aprendizaje continuo</strong>
+            <p class="gv-sm-metric__desc">Me mantengo al día e integro nuevas tecnologías de forma constante</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Columna derecha: especialidades (fondo oscuro vía CSS) -->
+    <div class="gv-sm-profile__right">
+      <div class="gv-sm-profile__specs">
+
+        <div class="gv-sm-spec">
+          <span class="gv-sm-spec__num" aria-hidden="true">01</span>
+          <div>
+            <h3 class="gv-sm-spec__title">Desarrollo de software y aplicaciones</h3>
+            <p class="gv-sm-spec__desc">Inicios centrados en desarrollo de aplicaciones web y backend con Java, PHP y bases de datos relacionales. Construcción de soluciones sólidas y orientadas a negocio.</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-spec">
+          <span class="gv-sm-spec__num" aria-hidden="true">02</span>
+          <div>
+            <h3 class="gv-sm-spec__title">Automatización y DevOps</h3>
+            <p class="gv-sm-spec__desc">Evolución hacia la automatización de procesos, integración y entrega continua, infraestructura como código y entornos cloud.</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-spec">
+          <span class="gv-sm-spec__num" aria-hidden="true">03</span>
+          <div>
+            <h3 class="gv-sm-spec__title">Cloud, plataforma y arquitectura</h3>
+            <p class="gv-sm-spec__desc">Especialización en arquitecturas cloud escalables, contenedores, orquestación y plataformas modernas con foco en fiabilidad y eficiencia.</p>
+          </div>
+        </div>
+
+        <div class="gv-sm-spec">
+          <span class="gv-sm-spec__num" aria-hidden="true">04</span>
+          <div>
+            <h3 class="gv-sm-spec__title">IA aplicada y mejora continua</h3>
+            <p class="gv-sm-spec__desc">Incorporación de inteligencia artificial generativa y análisis avanzado para acelerar entregas, optimizar procesos y tomar mejores decisiones basadas en datos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     STACK TECNOLÓGICO
+     ══════════════════════════════════════════ -->
+<section class="gv-sm-stack">
+  <div class="gv-container">
+    <h2 class="gv-section-title">Stack tecnológico</h2>
+    <div class="gv-sm-stack__table">
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">Lenguajes y frameworks</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">Java</span>
+          <span class="gv-badge">PHP</span>
+          <span class="gv-badge">Python</span>
+          <span class="gv-badge">JavaScript</span>
+          <span class="gv-badge">TypeScript</span>
+          <span class="gv-badge">Angular</span>
+          <span class="gv-badge">React</span>
+          <span class="gv-badge">Laravel</span>
+          <span class="gv-badge">WordPress</span>
+        </div>
+      </div>
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">Cloud &amp; Contenedores</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">Azure</span>
+          <span class="gv-badge">AWS</span>
+          <span class="gv-badge">Google Cloud</span>
+          <span class="gv-badge">Docker</span>
+          <span class="gv-badge">Kubernetes</span>
+          <span class="gv-badge">Helm</span>
+        </div>
+      </div>
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">DevOps &amp; Automatización</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">GitHub</span>
+          <span class="gv-badge">GitHub Actions</span>
+          <span class="gv-badge">Azure DevOps</span>
+          <span class="gv-badge">Terraform</span>
+          <span class="gv-badge">Jenkins</span>
+          <span class="gv-badge">ArgoCD</span>
+          <span class="gv-badge">GitOps</span>
+        </div>
+      </div>
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">Datos &amp; Almacenamiento</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">MySQL</span>
+          <span class="gv-badge">PostgreSQL</span>
+          <span class="gv-badge">Oracle Database</span>
+          <span class="gv-badge">MongoDB</span>
+          <span class="gv-badge">Redis</span>
+        </div>
+      </div>
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">Observabilidad</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">Prometheus</span>
+          <span class="gv-badge">Grafana</span>
+          <span class="gv-badge">Datadog</span>
+          <span class="gv-badge">Elastic Stack</span>
+          <span class="gv-badge">Azure Monitor</span>
+          <span class="gv-badge">Google Cloud Observability</span>
+        </div>
+      </div>
+
+      <div class="gv-sm-stack__row">
+        <div class="gv-sm-stack__label">IA y herramientas</div>
+        <div class="gv-sm-stack__tags">
+          <span class="gv-badge">ChatGPT</span>
+          <span class="gv-badge">Claude</span>
+          <span class="gv-badge">GitHub Copilot</span>
+          <span class="gv-badge">Codex</span>
+          <span class="gv-badge">Gemini</span>
+          <span class="gv-badge">Base44</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CÓMO TRABAJO CON CLIENTES
+     ══════════════════════════════════════════ -->
+<section id="como-trabajo" class="gv-sm-process">
+  <div class="gv-container">
+
+    <div class="gv-sm-process__header">
+      <p class="gv-section-eyebrow">/ Soluciones y acompañamiento</p>
+      <h2 class="gv-section-title">Cómo trabajo con clientes</h2>
+      <p class="gv-section-explanation">Un enfoque end-to-end para construir soluciones que generan impacto real.</p>
+    </div>
+
+    <div class="gv-sm-process__grid">
+
+      <div class="gv-sm-step">
+        <span class="gv-sm-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="28" cy="28" r="18"/>
+            <path d="M42 42L56 56"/>
+          </svg>
+        </span>
+        <span class="gv-sm-step__num">01</span>
+        <h3 class="gv-sm-step__title">Entender el problema</h3>
+        <p class="gv-sm-step__desc">Escucho, analizo y comprendo el contexto y los objetivos de negocio para definir el camino correcto.</p>
+      </div>
+
+      <div class="gv-sm-step">
+        <span class="gv-sm-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M44 8l12 12-32 32-14 2 2-14Z"/>
+            <path d="M40 12l12 12"/>
+          </svg>
+        </span>
+        <span class="gv-sm-step__num">02</span>
+        <h3 class="gv-sm-step__title">Diseñar la solución</h3>
+        <p class="gv-sm-step__desc">Propongo arquitecturas y tecnologías adecuadas, equilibrando valor, tiempo y presupuesto.</p>
+      </div>
+
+      <div class="gv-sm-step">
+        <span class="gv-sm-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 20L10 32l12 12"/>
+            <path d="M42 20l12 12-12 12"/>
+            <path d="M38 14L26 50"/>
+          </svg>
+        </span>
+        <span class="gv-sm-step__num">03</span>
+        <h3 class="gv-sm-step__title">Construir y automatizar</h3>
+        <p class="gv-sm-step__desc">Desarrollo, automatizo y pruebo con calidad, integrando buenas prácticas DevOps desde el inicio.</p>
+      </div>
+
+      <div class="gv-sm-step">
+        <span class="gv-sm-step__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M8 56h48"/>
+            <rect x="14" y="36" width="10" height="20"/>
+            <rect x="28" y="22" width="10" height="34"/>
+            <rect x="42" y="10" width="10" height="46"/>
+          </svg>
+        </span>
+        <span class="gv-sm-step__num">04</span>
+        <h3 class="gv-sm-step__title">Operar y evolucionar</h3>
+        <p class="gv-sm-step__desc">Monitorizo, optimizo y evoluciono la solución para que siga aportando valor en el tiempo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FORMAS DE COLABORACIÓN
+     ══════════════════════════════════════════ -->
+<section class="gv-sm-collab">
+  <div class="gv-container">
+    <h2 class="gv-sm-collab__heading">Formas de colaboración</h2>
+    <div class="gv-sm-collab__grid">
+
+      <div class="gv-sm-collab-card">
+        <span class="gv-sm-collab-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="6" y="22" width="52" height="36" rx="4"/>
+            <path d="M22 22V16a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6"/>
+            <path d="M6 40h52"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-collab-card__title">Proyecto cerrado</h3>
+        <p class="gv-sm-collab-card__desc">Ideal para necesidades concretas con alcance definido y entregables claros.</p>
+      </div>
+
+      <div class="gv-sm-collab-card">
+        <span class="gv-sm-collab-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="24" cy="20" r="10"/>
+            <path d="M6 54c0-10 7-17 18-17s18 7 18 17"/>
+            <circle cx="46" cy="22" r="8"/>
+            <path d="M38 54c2-8 8-13 16-13"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-collab-card__title">Acompañamiento técnico</h3>
+        <p class="gv-sm-collab-card__desc">Colaboración continua para evolucionar productos, plataformas o equipos de desarrollo.</p>
+      </div>
+
+      <div class="gv-sm-collab-card">
+        <span class="gv-sm-collab-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M36 6L14 36h18l-4 22 22-30H32Z"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-collab-card__title">Refuerzo puntual</h3>
+        <p class="gv-sm-collab-card__desc">Apoyo experto en áreas específicas para acelerar proyectos o resolver bloqueos técnicos.</p>
+      </div>
+
+      <div class="gv-sm-collab-card">
+        <span class="gv-sm-collab-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="12" y="12" width="40" height="48" rx="4"/>
+            <path d="M22 12V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4"/>
+            <path d="M20 34l8 8 16-16"/>
+          </svg>
+        </span>
+        <h3 class="gv-sm-collab-card__title">Consultoría y auditoría</h3>
+        <p class="gv-sm-collab-card__desc">Revisión y mejora de arquitecturas, costes cloud, DevOps, seguridad y observabilidad.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

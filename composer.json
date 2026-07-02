@@ -4,9 +4,13 @@
     "require": {
         "composer/installers": "^2.0",
         "wpackagist-plugin/google-site-kit": "^1.0",
-        "wpackagist-plugin/contact-form-7": "^5.0",
+        "wpackagist-plugin/contact-form-7": "^6.1",
         "wpackagist-plugin/wp-mail-smtp": "^4.0",
-        "wpackagist-plugin/wordpress-seo": "^23.0"
+        "wpackagist-plugin/wordpress-seo": "^23.0",
+        "wpackagist-plugin/classic-editor": "^1.0",
+        "wpackagist-plugin/polylang": "^3.0",
+        "wpackagist-plugin/duplicate-page": "^4.0",
+        "wpackagist-plugin/complianz-gdpr": "^7.0"
     },
     "repositories": [
         {

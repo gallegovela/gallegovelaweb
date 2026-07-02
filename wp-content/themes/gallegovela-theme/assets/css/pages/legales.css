@@ -1,0 +1,16 @@
+.gv-page--legal {
+	min-height: 60vh;
+}
+
+.gv-page-legal__header {
+	text-align: center;
+	padding: 50px 0;
+}
+
+.gv-page-legal__title {
+	margin: 0;
+}
+
+.gv-page-legal__content {
+	padding-bottom: var(--gv-space-4);
+}

@@ -18,6 +18,13 @@
 .gv-header__logo {
 	font-weight: 700;
 	font-size: 1.25rem;
+	display: inline-flex;
+	align-items: center;
+}
+
+.gv-header__logo-img {
+	max-height: 40px;
+	width: auto;
 }
 
 .gv-header__toggle {
@@ -52,6 +59,11 @@
 	flex-direction: column;
 	padding: var(--gv-space-2) var(--gv-container-padding);
 	gap: var(--gv-space-1);
+}
+
+.gv-header__menu a {
+	font-family: var(--gv-font-heading);
+	font-weight: 600;
 }
 
 @media (min-width: 768px) {

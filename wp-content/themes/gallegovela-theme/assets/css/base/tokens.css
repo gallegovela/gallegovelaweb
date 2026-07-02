@@ -8,6 +8,7 @@
 	--gv-color-text-on-dark: #f2f3f5;
 	--gv-color-text-muted-on-dark: #a7adba;
 	--gv-color-accent: #2f6fed;
+	--gv-color-accent-intense: #085bff;
 	--gv-color-accent-contrast: #ffffff;
 	--gv-color-border: #e4e6eb;
 
@@ -16,6 +17,8 @@
 	--gv-font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 	--gv-font-heading: 'Nunito', var(--gv-font-base);
 	--gv-font-body: 'Open Sans', var(--gv-font-base);
+
+	--gv-header-height: 88px;
 
 	--gv-radius: 12px;
 	--gv-container-width: 1200px;

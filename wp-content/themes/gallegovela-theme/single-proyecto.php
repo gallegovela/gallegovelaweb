@@ -8,14 +8,17 @@ while ( have_posts() ) :
 	$gv_fecha    = gallegovela_get_proyecto_fecha( $gv_id );
 	$gv_url      = gallegovela_get_proyecto_url( $gv_id );
 	$gv_galeria  = gallegovela_get_proyecto_galeria( $gv_id );
+	$gv_tipos    = get_the_terms( $gv_id, 'tipo_proyecto' );
+	$gv_eyebrow  = ( ! empty( $gv_tipos ) && ! is_wp_error( $gv_tipos ) ) ? $gv_tipos[0]->name : '';
+	$gv_tags     = gallegovela_tecnologia_badges( $gv_id );
 	?>
 	<main id="primary" class="gv-project-single">
 		<div class="gv-container">
 			<header class="gv-project-single__header">
+				<?php if ( $gv_eyebrow ) : ?>
+					<p class="gv-section-eyebrow"><?php echo esc_html( $gv_eyebrow ); ?></p>
+				<?php endif; ?>
 				<h1 class="gv-project-single__title"><?php the_title(); ?></h1>
-				<div class="gv-project-single__tags">
-					<?php echo gallegovela_tecnologia_badges( $gv_id ); ?>
-				</div>
 			</header>
 
 			<?php if ( has_post_thumbnail() ) : ?>
@@ -48,6 +51,12 @@ while ( have_posts() ) :
 						<?php echo wp_get_attachment_image( $gv_attachment_id, 'large', false, array( 'loading' => 'lazy' ) ); ?>
 					<?php endforeach; ?>
 				</div>
+			<?php endif; ?>
+
+			<?php if ( $gv_tags ) : ?>
+				<footer class="gv-project-single__tags">
+					<?php echo $gv_tags; ?>
+				</footer>
 			<?php endif; ?>
 		</div>
 	</main>

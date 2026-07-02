@@ -1,20 +1,23 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template base para todas las páginas estáticas.
+ *
+ * No añade contenedor ni título propios: el contenido de cada página
+ * (introducido en el editor de WordPress) es responsable de su propio
+ * layout y estructura de secciones.
+ *
+ * Para páginas estándar (política de privacidad, aviso legal…) basta con
+ * envolver el contenido en un bloque HTML con clase .gv-page-content.
+ */
+
+get_header();
+?>
 
 <main id="primary" class="gv-page">
 	<?php
 	while ( have_posts() ) :
 		the_post();
-		?>
-		<article <?php post_class( 'gv-page__article' ); ?>>
-			<header class="gv-page__header">
-				<h1 class="gv-page__title"><?php the_title(); ?></h1>
-			</header>
-
-			<div class="gv-page__content">
-				<?php the_content(); ?>
-			</div>
-		</article>
-		<?php
+		the_content();
 	endwhile;
 	?>
 </main>

@@ -1,0 +1,79 @@
+/* =========================================================
+   Plantillas de detalle: Proyecto (single-proyecto.php) y
+   Entrada de blog (single.php). Comparten estructura — Eyebrow,
+   Título, Cuerpo, Tags — separada en secciones con espacio entre
+   ellas para que no se junten. Ver specs/pages/project.md y
+   specs/pages/blogpost.md.
+   ========================================================= */
+
+.gv-post-single,
+.gv-project-single {
+	padding: var(--gv-space-4) 0;
+}
+
+.gv-post-single__header,
+.gv-project-single__header {
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-post-single__date {
+	display: block;
+	color: var(--gv-color-text-muted);
+	font-size: 0.9rem;
+	margin-top: var(--gv-space-1);
+}
+
+.gv-post-single__media,
+.gv-project-single__media {
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-post-single__media img,
+.gv-project-single__media img {
+	width: 100%;
+	border-radius: var(--gv-radius);
+}
+
+.gv-post-single__content,
+.gv-project-single__content {
+	max-width: 70ch;
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-project-single__body {
+	display: grid;
+	gap: var(--gv-space-3);
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-project-single__meta p {
+	margin-bottom: var(--gv-space-1);
+}
+
+.gv-project-single__gallery {
+	display: grid;
+	gap: var(--gv-space-2);
+	grid-template-columns: 1fr;
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-post-single__tags,
+.gv-project-single__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gv-space-1);
+	padding-top: var(--gv-space-3);
+	border-top: 1px solid var(--gv-color-border);
+}
+
+@media (min-width: 700px) {
+	.gv-project-single__gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 900px) {
+	.gv-project-single__body {
+		grid-template-columns: 2fr 1fr;
+	}
+}

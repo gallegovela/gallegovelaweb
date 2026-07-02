@@ -23,9 +23,8 @@ services:
       WORDPRESS_DB_USER: ${MYSQL_USER}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - wp_data:/var/www/html
-      - ./wp-content:/var/www/html/wp-content
+      - ./wp-content/themes/gallegovela-theme:/var/www/html/wp-content/themes/gallegovela-theme
+      - ./wp-content/plugins/gallegovela-projects:/var/www/html/wp-content/plugins/gallegovela-projects
 
 volumes:
   db_data:
-  wp_data:

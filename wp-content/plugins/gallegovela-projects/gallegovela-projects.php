@@ -24,5 +24,6 @@ require_once GV_PROJECTS_DIR . 'includes/meta/class-proyecto-meta.php';
 require_once GV_PROJECTS_DIR . 'includes/shortcodes/class-shortcodes.php';
 require_once GV_PROJECTS_DIR . 'includes/rest/class-rest-api.php';
 require_once GV_PROJECTS_DIR . 'includes/helpers.php';
+require_once GV_PROJECTS_DIR . 'includes/blog-helpers.php';
 
 Gallegovela_Projects_Plugin::instance();

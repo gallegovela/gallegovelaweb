@@ -1,7 +1,8 @@
 <?php
 /**
- * Últimas 4 entradas del blog estándar de WordPress.
- * Lógica de post aquí (no en el plugin, que es para proyectos).
+ * Últimas 3 entradas del blog estándar de WordPress.
+ * La tarjeta (gallegovela_render_blog_card) vive en el plugin
+ * gallegovela-projects, con el mismo diseño que Proyectos destacados.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,8 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 $gv_blog_query = new WP_Query( array(
 	'post_type'      => 'post',
 	'post_status'    => 'publish',
-	'posts_per_page' => 4,
+	'posts_per_page' => 3,
 ) );
+
+$gv_render_blog_card = function_exists( 'gallegovela_render_blog_card' )
+	? 'gallegovela_render_blog_card'
+	: 'gallegovela_render_post_card';
 ?>
 <section id="ultimas-entradas" class="gv-blog">
 	<div class="gv-container">
@@ -31,7 +36,7 @@ $gv_blog_query = new WP_Query( array(
 				<?php
 				while ( $gv_blog_query->have_posts() ) :
 					$gv_blog_query->the_post();
-					gallegovela_render_post_card( get_post() );
+					call_user_func( $gv_render_blog_card, get_post() );
 				endwhile;
 				wp_reset_postdata();
 				?>

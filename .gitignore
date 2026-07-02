@@ -1,6 +1,8 @@
 .env
 .DS_Store
 /vendor/
+/backups/
+*.sql
 
 # Plugins/temas instalados por Composer (WPackagist): no versionar, se reconstruyen en el build de Docker.
 /wp-content/plugins/*

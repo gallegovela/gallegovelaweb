@@ -1,38 +1,58 @@
-<?php get_header(); ?>
+<?php
+/**
+ * /proyectos — archivo del CPT 'proyecto' (has_archive), no una Página de WordPress.
+ */
 
-<main id="primary" class="gv-projects-archive">
+get_header();
+
+$gv_batch = 9;
+
+$gv_query = new WP_Query( array(
+	'post_type'      => 'proyecto',
+	'post_status'    => 'publish',
+	'posts_per_page' => $gv_batch,
+	'offset'         => 0,
+	'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
+) );
+
+$gv_total  = $gv_query->found_posts;
+$gv_loaded = min( $gv_batch, $gv_total );
+
+get_template_part( 'template-parts/hero-interno', null, array(
+	'eyebrow' => __( '/ Proyectos', 'gallegovela-theme' ),
+	'title'   => __( 'Algunas de los trabajos que he realizado o en los que he colaborado', 'gallegovela-theme' ),
+	'image'   => GALLEGOVELA_THEME_URI . '/assets/images/hero-proyectos.png',
+) );
+?>
+
+<main id="primary" class="gv-projects-catalog">
 	<div class="gv-container">
-		<h1 class="gv-page__title"><?php esc_html_e( 'Proyectos', 'gallegovela-theme' ); ?></h1>
-
-		<?php
-		$gv_tipos = get_terms( array(
-			'taxonomy'   => 'tipo_proyecto',
-			'hide_empty' => true,
-		) );
-
-		if ( ! empty( $gv_tipos ) && ! is_wp_error( $gv_tipos ) ) :
-			?>
-			<nav class="gv-projects-archive__filters" aria-label="<?php esc_attr_e( 'Filtrar por tipo de proyecto', 'gallegovela-theme' ); ?>">
-				<a class="gv-badge" href="<?php echo esc_url( get_post_type_archive_link( 'proyecto' ) ); ?>"><?php esc_html_e( 'Todos', 'gallegovela-theme' ); ?></a>
-				<?php foreach ( $gv_tipos as $gv_tipo ) : ?>
-					<a class="gv-badge" href="<?php echo esc_url( get_term_link( $gv_tipo ) ); ?>"><?php echo esc_html( $gv_tipo->name ); ?></a>
-				<?php endforeach; ?>
-			</nav>
-		<?php endif; ?>
-
-		<?php if ( have_posts() ) : ?>
-			<div class="gv-projects__grid">
+		<?php if ( $gv_total > 0 ) : ?>
+			<div class="gv-projects-catalog__grid" id="gv-projects-grid">
 				<?php
-				while ( have_posts() ) :
-					the_post();
-					gallegovela_render_project_card( get_post() );
-				endwhile;
+				foreach ( $gv_query->posts as $gv_proyecto ) {
+					gallegovela_render_project_card( $gv_proyecto );
+				}
 				?>
 			</div>
 
-			<?php the_posts_pagination(); ?>
+			<p class="gv-catalog__status" id="gv-projects-status" data-loaded="<?php echo esc_attr( $gv_loaded ); ?>" data-total="<?php echo esc_attr( $gv_total ); ?>">
+				<span class="gv-catalog__count">
+					<?php
+					printf(
+						/* translators: 1: loaded count, 2: total count */
+						esc_html__( '%1$d / %2$d', 'gallegovela-theme' ),
+						(int) $gv_loaded,
+						(int) $gv_total
+					);
+					?>
+				</span>
+				<?php if ( $gv_loaded < $gv_total ) : ?>
+					<span class="gv-catalog__more"><?php esc_html_e( 'Scroll para mostrar más', 'gallegovela-theme' ); ?></span>
+				<?php endif; ?>
+			</p>
 		<?php else : ?>
-			<p><?php esc_html_e( 'Todavía no hay proyectos publicados.', 'gallegovela-theme' ); ?></p>
+			<p class="gv-projects__empty"><?php esc_html_e( 'Todavía no hay proyectos publicados.', 'gallegovela-theme' ); ?></p>
 		<?php endif; ?>
 	</div>
 </main>

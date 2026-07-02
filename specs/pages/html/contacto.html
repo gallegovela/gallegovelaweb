@@ -1,0 +1,201 @@
+<!--
+  PÁGINA: CONTACTO
+  ─────────────────────────────────────────────────────────────────
+  Cómo usarlo en WordPress:
+    1. Páginas → Nueva página → título "Contacto", slug "contacto"
+    2. Editor → ⋮ → Editor de código (o bloque "HTML personalizado")
+    3. Pegar este fichero completo y publicar
+  ─────────────────────────────────────────────────────────────────
+  Formulario: gestionado por Contact Form 7, formulario
+    "Contacto Gallegovela" (shortcode con html_class="gv-ct-form").
+  ─────────────────────────────────────────────────────────────────
+  Hero: usa el componente "Hero interno" (.gv-page-hero, ver template-parts/hero-interno.php
+  y assets/css/components/hero-interno.css). Imagen: assets/images/hero-contacto.png
+  CSS cargado automáticamente cuando el slug es "contacto"
+  ─────────────────────────────────────────────────────────────────
+-->
+
+
+<!-- ══════════════════════════════════════════
+     HERO (componente reutilizable "Hero interno")
+     ══════════════════════════════════════════ -->
+<section class="gv-page-hero">
+  <div class="gv-container gv-page-hero__inner">
+
+    <div class="gv-page-hero__content">
+      <p class="gv-section-eyebrow">/ Contacto</p>
+      <h1 class="gv-page-hero__title">
+        Hablemos de tu próximo
+        <span class="gv-text-accent">proyecto.</span>
+      </h1>
+    </div>
+
+    <div class="gv-page-hero__visual" aria-hidden="true">
+      <img
+        src="/wp-content/themes/gallegovela-theme/assets/images/hero-contacto.png"
+        alt=""
+        loading="eager"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FORMULARIO
+     ══════════════════════════════════════════ -->
+<section class="gv-ct-form-section">
+  <div class="gv-container gv-ct-form-section__inner">
+
+    <!-- Columna izquierda: texto + USPs -->
+    <div class="gv-ct-form-section__left">
+      <p class="gv-ct-form-section__desc">
+        Cuéntame tu idea, el desafío que quieres resolver o simplemente explora cómo puedo ayudarte. Estaré encantado de responderte lo antes posible.
+      </p>
+
+      <ul class="gv-ct-usps">
+
+        <li class="gv-ct-usp">
+          <span class="gv-ct-usp__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="6" y="16" width="52" height="36" rx="4"/>
+              <path d="M6 18l26 18 26-18"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-ct-usp__title">Respuesta rápida</strong>
+            <p class="gv-ct-usp__desc">Suelo responder en menos de 24 horas laborables.</p>
+          </div>
+        </li>
+
+        <li class="gv-ct-usp">
+          <span class="gv-ct-usp__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="8" y="12" width="48" height="48" rx="4"/>
+              <path d="M8 26h48"/>
+              <path d="M20 8v8M44 8v8"/>
+              <circle cx="22" cy="40" r="2" fill="currentColor" stroke="none"/>
+              <circle cx="32" cy="40" r="2" fill="currentColor" stroke="none"/>
+              <circle cx="42" cy="40" r="2" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-ct-usp__title">Reuniones online</strong>
+            <p class="gv-ct-usp__desc">Disponibilidad para reuniones virtuales o presenciales.</p>
+          </div>
+        </li>
+
+        <li class="gv-ct-usp">
+          <span class="gv-ct-usp__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="12" y="28" width="40" height="30" rx="4"/>
+              <path d="M22 28V20a10 10 0 0 1 20 0v8"/>
+              <circle cx="32" cy="44" r="4"/>
+            </svg>
+          </span>
+          <div>
+            <strong class="gv-ct-usp__title">Confidencialidad</strong>
+            <p class="gv-ct-usp__desc">Tu información y la de tu proyecto están 100% seguras.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Columna derecha: formulario -->
+    <div class="gv-ct-form-section__right">
+      <div class="gv-ct-form-card">
+        <h2 class="gv-ct-form-card__title">Envíame un mensaje</h2>
+
+        <!--
+          Formulario gestionado por Contact Form 7 — formulario
+          "Contacto Gallegovela" (wp-admin → Contact → Contact Forms).
+          html_class="gv-ct-form" hace que el <form> generado por CF7
+          reciba la misma clase que estilaba el marcado estático, así
+          que hereda el CSS de contacto.css sin cambios.
+        -->
+        [contact-form-7 id="fbee3b2" title="Contacto Gallegovela" html_class="gv-ct-form"]
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     INFORMACIÓN: DÓNDE TRABAJO
+     ══════════════════════════════════════════ -->
+<section class="gv-ct-info">
+  <div class="gv-container gv-ct-info__inner">
+
+    <div class="gv-ct-info__intro">
+      <h2 class="gv-ct-info__title">¿Dónde trabajo?</h2>
+      <p class="gv-ct-info__desc">
+        Ofrezco servicios en remoto a clientes de todo el mundo, con disponibilidad para reuniones presenciales en España.
+      </p>
+    </div>
+
+    <div class="gv-ct-info__cards">
+
+      <div class="gv-ct-info-card">
+        <span class="gv-ct-info-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M32 4a18 18 0 0 1 18 18c0 12-18 38-18 38S14 34 14 22A18 18 0 0 1 32 4Z"/>
+            <circle cx="32" cy="22" r="6"/>
+          </svg>
+        </span>
+        <strong class="gv-ct-info-card__label">Ubicación</strong>
+        <span class="gv-ct-info-card__value">A Coruña, España</span>
+        <span class="gv-ct-info-card__value">Galicia, 15001</span>
+      </div>
+
+      <div class="gv-ct-info-card">
+        <span class="gv-ct-info-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="8" y="12" width="48" height="30" rx="3"/>
+            <path d="M4 50h56"/>
+            <path d="M22 50l3 4h18l3-4"/>
+          </svg>
+        </span>
+        <strong class="gv-ct-info-card__label">Trabajo en remoto</strong>
+        <span class="gv-ct-info-card__value">Colaboro con equipos de cualquier ubicación.</span>
+      </div>
+
+      <div class="gv-ct-info-card">
+        <span class="gv-ct-info-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="32" cy="32" r="26"/>
+            <path d="M32 16v18l10 6"/>
+          </svg>
+        </span>
+        <strong class="gv-ct-info-card__label">Horario</strong>
+        <span class="gv-ct-info-card__value">Lunes a Viernes</span>
+        <span class="gv-ct-info-card__value">09:00 - 18:00 (CET)</span>
+      </div>
+
+      <div class="gv-ct-info-card gv-ct-info-card--social">
+        <strong class="gv-ct-info-card__label">Conecta conmigo</strong>
+        <div class="gv-ct-social">
+          <a class="gv-ct-social__link" href="https://linkedin.com/in/gallegovela" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a class="gv-ct-social__link" href="https://github.com/gallegovela" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+          <a class="gv-ct-social__link" href="mailto:contacto@gallegovela.es" aria-label="Email">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="20" height="20">
+              <rect x="6" y="16" width="52" height="36" rx="4"/>
+              <path d="M6 18l26 18 26-18"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

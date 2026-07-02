@@ -18,6 +18,7 @@ class Gallegovela_Shortcodes {
 	private function __construct() {
 		add_shortcode( 'gv_proyectos_destacados', array( $this, 'render_proyectos_destacados' ) );
 		add_shortcode( 'gv_proyecto_galeria', array( $this, 'render_proyecto_galeria' ) );
+		add_shortcode( 'gv_blog_destacados', array( $this, 'render_blog_destacados' ) );
 	}
 
 	public function render_proyectos_destacados( $atts ) {
@@ -43,6 +44,28 @@ class Gallegovela_Shortcodes {
 			</div>
 			<?php
 		}
+		return ob_get_clean();
+	}
+
+	/**
+	 * Últimas entradas de blog, con el mismo diseño de tarjeta que
+	 * "Proyectos destacados" (ver gallegovela_render_blog_card()).
+	 */
+	public function render_blog_destacados( $atts ) {
+		$atts = shortcode_atts( array( 'limite' => 3 ), $atts );
+
+		$posts = gallegovela_get_latest_posts( intval( $atts['limite'] ) );
+
+		if ( empty( $posts ) ) {
+			return '';
+		}
+
+		ob_start();
+		echo '<div class="gv-blog__grid">';
+		foreach ( $posts as $post ) {
+			gallegovela_render_blog_card( $post );
+		}
+		echo '</div>';
 		return ob_get_clean();
 	}
 

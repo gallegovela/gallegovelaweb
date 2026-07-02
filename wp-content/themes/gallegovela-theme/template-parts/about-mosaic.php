@@ -36,7 +36,7 @@ $gv_about_cards = array(
 	),
 );
 ?>
-<section id="sobre-mi" class="gv-about">
+<section id="que-hago" class="gv-about">
 	<div class="gv-container">
 		<div class="gv-section-header">
 			<div class="gv-section-header__left">
@@ -44,6 +44,7 @@ $gv_about_cards = array(
 				<h2 class="home-section-title"><?php esc_html_e( 'Diseño y construcción de soluciones software que generan impacto', 'gallegovela-theme' ); ?></h2>
 			</div>
 			<div class="gv-section-header__right">
+				<a class="gv-section-header__link" href="<?php echo esc_url( home_url( '/sobre-mi' ) ); ?>"><?php esc_html_e( 'Sobre Mí', 'gallegovela-theme' ); ?></a>
 				<p class="gv-section-header__text"><?php esc_html_e( 'Combino arquitectura, automatización e inteligencia artificial para crear sistemas escalables, eficientes y preparados para el futuro.', 'gallegovela-theme' ); ?></p>
 			</div>
 		</div>
@@ -52,13 +53,18 @@ $gv_about_cards = array(
 			<?php foreach ( $gv_about_cards as $card ) : ?>
 				<div class="gv-about__card">
 					<div class="gv-about__icon" aria-hidden="true">
-						<img
-							src="<?php echo esc_url( GALLEGOVELA_THEME_URI . '/assets/images/' . $card['icon'] ); ?>"
-							alt="<?php echo esc_attr( $card['alt'] ); ?>"
-							width="320"
-							height="320"
-							loading="lazy"
-						>
+						<?php
+						$gv_icon_key = str_replace( '.png', '', $card['icon'] );
+						$gv_icon_id  = (int) get_theme_mod( $gv_icon_key, 0 );
+						$gv_icon_url = $gv_icon_id
+							? wp_get_attachment_image_url( $gv_icon_id, 'full' )
+							: GALLEGOVELA_THEME_URI . '/assets/images/' . $card['icon'];
+						?>
+					<img
+						src="<?php echo esc_url( $gv_icon_url ); ?>"
+						alt="<?php echo esc_attr( $card['alt'] ); ?>"
+						loading="lazy"
+					>
 					</div>
 					<h3 class="gv-about__title"><?php echo esc_html( $card['title'] ); ?></h3>
 					<p class="gv-about__desc"><?php echo esc_html( $card['desc'] ); ?></p>

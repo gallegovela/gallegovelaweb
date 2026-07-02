@@ -28,7 +28,7 @@
 .gv-hero__eyebrow {
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	font-size: 0.85rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--gv-color-accent);
 	margin-bottom: var(--gv-space-1);
@@ -57,7 +57,7 @@
 
 @media (min-width: 900px) {
 	.gv-hero__inner {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 70% 30%;
 		align-items: center;
 	}
 

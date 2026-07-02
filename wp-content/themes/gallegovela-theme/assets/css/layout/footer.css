@@ -49,11 +49,64 @@
 	gap: var(--gv-space-1);
 }
 
+.gv-footer__logo-link {
+	display: inline-block;
+	margin-bottom: var(--gv-space-1);
+}
+
+.gv-footer__logo-img {
+	max-height: 40px;
+	width: auto;
+}
+
+.gv-footer__rrss {
+	display: flex;
+	gap: var(--gv-space-1);
+	margin-top: var(--gv-space-1);
+}
+
+.gv-footer__rrss-link {
+	display: inline-flex;
+	align-items: center;
+	color: var(--gv-color-text-muted-on-dark);
+	transition: color 0.2s ease;
+	filter: grayscale(1);
+}
+
+.gv-footer__rrss-link svg {
+	width: 20px;
+	height: 20px;
+}
+
+.gv-footer__rrss-link:hover {
+	color: var(--gv-color-text-on-dark);
+}
+
 .gv-footer__copy {
 	color: var(--gv-color-text-muted-on-dark);
 	margin: var(--gv-space-2) 0 0;
 	font-size: 0.85rem;
 	text-align: center;
+}
+
+.gv-footer__publicidad {
+	background: #fff;
+	padding: var(--gv-space-2) 0;
+	border-top: 1px solid var(--gv-color-border);
+}
+
+.gv-footer__publicidad-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gv-space-2);
+}
+
+.gv-footer__publicidad-inner img {
+	height: 50px;
+	width: auto;
+	object-fit: contain;
 }
 
 @media (min-width: 700px) {

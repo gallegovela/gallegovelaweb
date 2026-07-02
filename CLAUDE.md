@@ -36,38 +36,16 @@ Generar:
 
 ## Theme
 
-Nombre:
+Leer fichero specs/theme.md
 
-gallegovela-theme
+## Plugins
 
-Responsabilidades:
+Leer fichero specs/plugins.md
 
-- Presentación
-- Layout
-- Templates
-- CSS
-- Navegación
-- Responsive
+## Páginas
 
----
+Leer ficheros *.md dentro de spec/pages
 
-## Plugin
-
-Nombre:
-
-gallegovela-projects
-
-Responsabilidades:
-
-- Custom Post Type Proyecto
-- Taxonomías
-- Metadatos
-- Shortcodes
-- API de consulta
-
-Toda la lógica de negocio relacionada con proyectos debe vivir en el plugin.
-
----
 
 # Requisitos WordPress
 
@@ -88,6 +66,18 @@ Toda la lógica de negocio relacionada con proyectos debe vivir en el plugin.
 Todas las imágenes están disponibles en:
 
 /design
+
+---
+
+## logo.png
+
+Imagen logo de la página web, utilizada en la cabecera.
+
+---
+
+## logo-footer.png
+
+Imagen logo para el footer de la página web.
 
 ---
 
@@ -129,7 +119,7 @@ background-position: center
 
 Overlay:
 
-rgba(255,255,255,0.6)
+rgba(255,255,255,0.7)
 
 ---
 
@@ -141,166 +131,19 @@ Deben utilizarse exactamente esos iconos.
 
 ---
 
-# Estructura de la Home
+### publicidad
 
-Cada sección debe mostrar como título el campo Titulo:  Como sobretítulo, el mismo texto que figura en `content.md`
-para esa sección (el encabezado `#` correspondiente: "Qué hago", "Stack",
-"Proyectos", "Blog"...). No inventar variantes ni reescribir ningún texto. 
+Contiene los logos que deben aparecer en la sección Publicidad del footer.
 
-El título se presenta como h3 y estilo "home-section-overtitle".  
-El título se presenta como h2 y lleva el estilo "home-section-title".  
-El sobretítulo va encima del título, y ambos no deben superar el 50% de ancho de la sección.
-En caso de haber Texto en la sección, se presenta en la parte derecha, a la altura del título. Alineación derecha y no debe superar el 50% del ancho de la sección.
-En caso de existir un enlace, se presenta en la parte derecha de la sección, como enlace y a la altura del título. Alineación derecha.  Ancho máximo: 50% de la sección.
 
-## Hero
 
-Fondo:
 
-hero-background.png
 
-Overlay blanco semitransparente.
 
-La capa de overlay es un `<div class="gv-hero__overlay">` colgando directamente
-de `<section class="gv-hero">` (no un `::before`), para que sea un elemento
-real y customizable. Envuelve al `.gv-container.gv-hero__inner` (texto +
-visual) sin alterar su layout ni su posición: el color/opacidad del overlay
-se controla con la variable CSS `--gv-hero-overlay` (definida en
-`base/tokens.css`), no hace falta tocar la plantilla para ajustarlo.
-
-Layout:
-
-Dos columnas.
-
-Tamaño:
-
-Pantalla completa (100vh), en escritorio y en móvil.
-
-Navbar:
-
-Fija (sticky) en la parte superior al hacer scroll.
-
-Imagen de fondo:
-
-Se gestiona como imagen de la Media Library de WordPress (no como asset
-fijo del theme), configurable desde el Customizer (Apariencia > Personalizar
-> Hero (Home) > Imagen de fondo del Hero).
-
----
-
-Botones:
-
-- Sobre mí
-- Proyectos
-
----
-
-## Qué hago
-
-Título: Diseño y construcción de soluciones software que generan impacto
-Texto: Combino arquitectura, automatización e inteligencia artificial para crear sistemas escalables, eficientes y preparados para el futuro.
-
-Fondo claro.
-
-Diseño mosaico 2x2.
-
-Cuatro tarjetas:
-
-- Título: Desarrollo de software. 
-  Texto: Soluciones adaptadas a las necesidades de cada organización: desde páginas web corporativas hasta aplicaciones de gestión y plataformas de negocio.
-  Icono: gallegovela_quehago_software.png
-- Título: DevOps y automatización. 
-  Texto: Infraestructuras escalables, seguras y resilientes, utilizando tecnologías cloud modernas que faciliten la expansión de tu negocio.
-  Icono: gallegovela_quehago_automatizaciones.png
-- Título: Arquitectura cloud. 
-  Texto: Infraestructuras escalables, seguras y resilientes, utilizando tecnologías cloud modernas que faciliten la expansión de tu negocio. 
-  Icono: gallegovela_quehago_cloud.png
-- Inteligencia artificial aplicada.
-  Texto: La integración de la IA generativa y el uso de modelos avanzados en productos, procesos y flujos de trabajo reales aceleran y optimizan el trabajo diario.
-  Icono: gallegovela_quehago_ia.png
-
-Los iconos corresponden a las imagenes que hay en /design/home.  Cada tarjeta se presenta con el icono en tamaño 320x320 en la parte izquierda.  A su derecha el título como h3.  El texto de la tarjeta va en una siguiente línea, a tamaño completo de la tarjeta.
-
----
-
-## Stack
-
-Título: Tecnologías que utilizo para construir soluciones robustas.
-
-Fondo oscuro.
-
-Timeline vertical con línea continua a la izquierda (`gv-process::before`, 2px,
-rgba(255,255,255,0.12)) y nodo circular por etapa (`.gv-step::before`, 24px,
-borde azul `#2f80ed`). En hover el nodo se expande a 30px y se rellena de azul
-con sombra (`box-shadow: 0 0 20px rgba(47,128,237,0.5)`).
-
-NO utilizar logos.
-
-NO utilizar iconos de herramientas.
-
-Las tecnologías deben representarse mediante badges o tags (`.gv-tag`,
-border-radius 999px).
-
-Cuatro etapas definidas en `template-parts/stack-timeline.php`:
-
-- **01 · Descubrimiento y diseño** — Figma, Canva, UML, Workshops, ChatGPT, Gemini, Base44
-- **02 · Desarrollo a medida** — Java, PHP, WordPress, Laravel, Python, Angular, React, MySQL, Oracle Database, MongoDB, Redis, Codex, Claude Code
-- **03 · Plataforma, automatización y cloud** — Azure, AWS, Google Cloud, Docker, Kubernetes, Helm, GitHub, GitHub Actions, Azure DevOps, Terraform, ArgoCD, GitOps, FinOps, Capacity Planning, Infrastructure Forecasting, Codex, Claude Code
-- **04 · Observabilidad y evolución** — Prometheus, Grafana, Datadog, Elasticsearch, Kibana, Azure Monitor, Google Cloud Observability, ChatGPT, Claude
-
-Estructura interna de cada etapa (`.gv-stack__item`):
-
-1. `.gv-step-number` — número y nombre de etapa en azul, uppercase, letter-spacing 2px
-2. `h3` — título de la etapa
-3. `.subtitle` — frase resumen de la etapa
-4. `p` — descripción larga
-5. `.gv-ai` — bloque "IA EN ESTA ETAPA" con fondo rgba(47,128,237,0.08) y
-   borde izquierdo 3px azul; explica cómo se usa IA en esa fase
-6. `.gv-groups` > `.gv-group-title` + `.gv-tags` — grupo "Herramientas" con badges
-
-Cada etapa (`.gv-stack__item`) se presenta con borde 1px rgba(255,255,255,0.08),
-radius 20px, fondo rgba(255,255,255,0.03). En hover: `translateY(-4px)` y
-`border-color: rgba(47,128,237,0.4)`.
-
----
-
-## Proyectos destacados
-
-Título: Algunos proyectos en los que he trabajado
-Enlace: Ver Todos ( href: /proyectos )
-
-Fondo claro.
-
-Mostrar automáticamente los 3 proyectos destacados.
-
-Origen:
-
-Custom Post Type Proyecto.
-
----
-
-## Blog
-
-Título: Últimos posts
-Enlace: Ver Todos ( href: /blog )
-
-Fondo claro.
-
-Mostrar automáticamente las 4 últimas entradas.
-
-Origen:
-
-Posts estándar WordPress.
-
----
 
 ## Footer
 
-Fondo oscuro.
 
-Texto blanco.
-
-Mantener estilo del mockup.
 
 ---
 
@@ -385,6 +228,14 @@ Media Library). `gallegovela_get_hero_background_url()` devuelve esa imagen
 o, si no hay ninguna configurada, cae al asset por defecto del theme
 (`assets/images/hero-background.png`). `template-parts/hero.php` la pinta
 como `style="background-image:..."` inline en la sección, no por CSS.
+
+`wp-content/themes/gallegovela-theme/inc/setup.php` desactiva `wpautop` en
+`the_content` solo para Páginas (`is_page()`), vía el hook `wp`. Las páginas
+interiores (Sobre mí, Contacto, legales...) llevan HTML pegado directamente
+en el editor (ver `specs/pages/html/`), y `wpautop` inserta `<p>` vacíos
+entre bloques separados por líneas en blanco, rompiendo layouts de
+grid/flex de varias columnas. Las entradas del blog no se ven afectadas
+(mantienen `wpautop`).
 
 ---
 

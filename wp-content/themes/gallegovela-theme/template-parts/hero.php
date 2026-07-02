@@ -1,6 +1,6 @@
 <?php
 /**
- * Hero de la Home. Copy real desde content.md.
+ * Hero de la Home. Copy real desde specs/pages/home.md.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,10 +18,10 @@ $gv_hero_highlights = array(
 	<div class="gv-hero__overlay">
 		<div class="gv-container gv-hero__inner">
 			<div class="gv-hero__content">
-				<p class="gv-hero__eyebrow"><?php esc_html_e( 'Ingeniero de Software & Cloud', 'gallegovela-theme' ); ?></p>
-				<h1 class="gv-hero__title"><?php esc_html_e( 'Del concepto a la operación', 'gallegovela-theme' ); ?></h1>
+				<p class="gv-hero__eyebrow"><?php esc_html_e( '/ Ingeniero Informático', 'gallegovela-theme' ); ?></p>
+				<h1 class="gv-hero__title"><?php echo esc_html__( 'INGENIERÍA DEL SOFTWARE', 'gallegovela-theme' ); ?><br><?php echo esc_html__( 'DEVOPS & CLOUD', 'gallegovela-theme' ); ?><br><?php echo esc_html__( 'INTELIGENCIA ARTIFICIAL', 'gallegovela-theme' ); ?></h1>
 				<p class="gv-hero__subtitle">
-					<?php esc_html_e( 'Acompaño todo el ciclo de vida del software, combinando estrategia, desarrollo, automatización e inteligencia artificial para transformar ideas en soluciones robustas y sostenibles.', 'gallegovela-theme' ); ?>
+					<?php esc_html_e( 'Diseño y construcción de plataformas escalables, automatización de sistemas complejos, integración de inteligencia artificial en entornos reales.', 'gallegovela-theme' ); ?>
 				</p>
 				<div class="gv-hero__actions">
 					<a class="gv-button gv-button--primary" href="<?php echo esc_url( home_url( '/sobre-mi' ) ); ?>"><?php esc_html_e( 'Sobre mí', 'gallegovela-theme' ); ?></a>

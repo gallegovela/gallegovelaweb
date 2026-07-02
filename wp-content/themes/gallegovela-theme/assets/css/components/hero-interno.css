@@ -1,0 +1,56 @@
+/* =========================================================
+   Hero interno: cabecera reutilizable de páginas interiores.
+   Dos columnas — texto (eyebrow + título + descripción + botones) a la
+   izquierda, imagen decorativa a la derecha. Ver template-parts/hero-interno.php.
+   ========================================================= */
+
+.gv-page-hero {
+	padding: var(--gv-space-4) 0;
+	background: var(--gv-color-bg);
+}
+
+.gv-page-hero__inner {
+	display: grid;
+	gap: var(--gv-space-3);
+	align-items: center;
+}
+
+.gv-page-hero__title {
+	font-size: clamp(1.75rem, 4vw, 3rem);
+	line-height: 1.15;
+	font-weight: 800;
+	margin-bottom: var(--gv-space-2);
+}
+
+.gv-page-hero__desc {
+	max-width: 48ch;
+	margin-bottom: var(--gv-space-3);
+}
+
+.gv-page-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gv-space-1);
+}
+
+.gv-page-hero__visual {
+	display: none;
+}
+
+.gv-page-hero__visual img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media (min-width: 900px) {
+	.gv-page-hero__inner {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.gv-page-hero__visual {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

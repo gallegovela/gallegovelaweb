@@ -1,6 +1,7 @@
 body {
 	font-family: var(--gv-font-body);
-	font-size: 16px;
+	font-size: 15px;
+	font-weight: 100;
 	line-height: 1.6;
 }
 
@@ -12,7 +13,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: clamp(2rem, 5vw, 3.25rem);
+	font-size: clamp(2rem, 5vw, 2.75rem);
 }
 
 h3 {
@@ -69,7 +70,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	justify-content: flex-end;
+	margin-top: calc(0.8rem * 1.2 + var(--gv-space-1));
 }
 
 .home-section-overtitle {
@@ -81,6 +82,10 @@ p {
 	letter-spacing: 0.1em;
 	color: var(--gv-color-accent);
 	margin: 0 0 var(--gv-space-1);
+}
+
+.home-section-overtitle::before {
+	content: "/ ";
 }
 
 .home-section-title {
@@ -98,10 +103,12 @@ p {
 }
 
 .gv-section-header__link {
+	display: inline-block;
 	font-size: 0.9rem;
 	font-weight: 600;
 	color: var(--gv-color-accent);
 	text-decoration: none;
+	margin-bottom: var(--gv-space-1);
 }
 
 .gv-section-header__link:hover {
@@ -109,7 +116,7 @@ p {
 }
 
 .gv-section-header--dark .home-section-overtitle {
-	color: var(--gv-color-text-muted-on-dark);
+	color: var(--gv-color-accent);
 }
 
 .gv-section-header--dark .home-section-title {
@@ -118,10 +125,6 @@ p {
 
 .gv-section-header--dark .gv-section-header__text {
 	color: var(--gv-color-text-muted-on-dark);
-}
-
-.gv-section-header--dark .gv-section-header__link {
-	color: var(--gv-color-text-on-dark);
 }
 
 @media (max-width: 699px) {
@@ -134,5 +137,6 @@ p {
 		max-width: 100%;
 		text-align: left;
 		align-items: flex-start;
+		margin-top: 0;
 	}
 }

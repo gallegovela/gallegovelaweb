@@ -9,14 +9,13 @@
 	grid-template-columns: 1fr;
 }
 
-/* Tarjeta: icono izquierda + título derecha + descripción fila completa */
 .gv-about__card {
 	background: var(--gv-color-bg);
 	border: 1px solid var(--gv-color-border);
 	border-radius: var(--gv-radius);
 	padding: var(--gv-space-3);
 	display: grid;
-	grid-template-columns: 120px 1fr;
+	grid-template-columns: 80px 1fr;
 	grid-template-rows: auto auto;
 	column-gap: var(--gv-space-2);
 	row-gap: var(--gv-space-2);
@@ -25,8 +24,8 @@
 .gv-about__icon {
 	grid-column: 1;
 	grid-row: 1;
-	width: 120px;
-	height: 120px;
+	width: 80px;
+	height: 80px;
 }
 
 .gv-about__icon img {
@@ -52,15 +51,14 @@
 	.gv-about__grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
-}
 
-@media (min-width: 1100px) {
 	.gv-about__card {
-		grid-template-columns: 320px 1fr;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
 
 	.gv-about__icon {
-		width: 320px;
-		height: 320px;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
 	}
 }

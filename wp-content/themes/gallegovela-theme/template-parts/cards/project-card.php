@@ -19,10 +19,10 @@ $gv_id = $gv_proyecto->ID;
 				<?php echo get_the_post_thumbnail( $gv_proyecto, 'gallegovela-card', array( 'loading' => 'lazy' ) ); ?>
 			</div>
 		<?php endif; ?>
+		<div class="gv-project-card__tags">
+			<?php echo gallegovela_tecnologia_badges( $gv_id ); ?>
+		</div>
 		<h3 class="gv-project-card__title"><?php echo esc_html( get_the_title( $gv_proyecto ) ); ?></h3>
 		<p class="gv-project-card__excerpt"><?php echo esc_html( get_the_excerpt( $gv_proyecto ) ); ?></p>
 	</a>
-	<div class="gv-project-card__tags">
-		<?php echo gallegovela_tecnologia_badges( $gv_id ); ?>
-	</div>
 </article>
