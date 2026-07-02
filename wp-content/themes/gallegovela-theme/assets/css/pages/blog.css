@@ -76,6 +76,6 @@
 
 	.gv-blog-layout__sidebar {
 		position: sticky;
-		top: var(--gv-header-height);
+		top: calc(var(--gv-header-height) + var(--gv-space-2));
 	}
 }
