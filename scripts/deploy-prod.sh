@@ -59,6 +59,7 @@ echo "==> Arrancando contenedor '$CONTAINER_NAME' en el puerto $HOST_PORT..."
 docker run -d \
   --name "$CONTAINER_NAME" \
   --restart unless-stopped \
+  --add-host=host.docker.internal:host-gateway \
   -p "${HOST_PORT}:80" \
   -e WORDPRESS_DB_HOST="$WORDPRESS_DB_HOST" \
   -e WORDPRESS_DB_NAME="$WORDPRESS_DB_NAME" \
