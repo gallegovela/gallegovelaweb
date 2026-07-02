@@ -20,9 +20,9 @@ $gv_hero_highlights = array(
 			<div class="gv-hero__content">
 				<p class="gv-hero__eyebrow"><?php esc_html_e( '/ Ingeniero Informático', 'gallegovela-theme' ); ?></p>
 				<h1 class="gv-hero__title"><?php echo esc_html__( 'INGENIERÍA DEL SOFTWARE', 'gallegovela-theme' ); ?><br><?php echo esc_html__( 'DEVOPS & CLOUD', 'gallegovela-theme' ); ?><br><?php echo esc_html__( 'INTELIGENCIA ARTIFICIAL', 'gallegovela-theme' ); ?></h1>
-				<p class="gv-hero__subtitle">
+				<h5 class="gv-hero__subtitle">
 					<?php esc_html_e( 'Diseño y construcción de plataformas escalables, automatización de sistemas complejos, integración de inteligencia artificial en entornos reales.', 'gallegovela-theme' ); ?>
-				</p>
+				</h5>
 				<div class="gv-hero__actions">
 					<a class="gv-button gv-button--primary" href="<?php echo esc_url( home_url( '/sobre-mi' ) ); ?>"><?php esc_html_e( 'Sobre mí', 'gallegovela-theme' ); ?></a>
 					<a class="gv-button gv-button--secondary" href="#proyectos-destacados"><?php esc_html_e( 'Proyectos', 'gallegovela-theme' ); ?></a>

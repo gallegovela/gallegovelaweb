@@ -35,7 +35,13 @@
 }
 
 .gv-hero__subtitle {
-	max-width: 38ch;
+	max-width: 100%;
+	font-family: var(--gv-font-body);
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.6;
+	color: var(--gv-color-text-muted);
+	margin: 0 0 var(--gv-space-2);
 }
 
 .gv-hero__actions {
