@@ -25,6 +25,7 @@ services:
     volumes:
       - ./wp-content/themes/gallegovela-theme:/var/www/html/wp-content/themes/gallegovela-theme
       - ./wp-content/plugins/gallegovela-projects:/var/www/html/wp-content/plugins/gallegovela-projects
+      - ./uploads:/var/www/html/wp-content/uploads
 
   phpmyadmin:
     image: phpmyadmin:latest
