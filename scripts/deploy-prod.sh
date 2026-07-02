@@ -50,6 +50,16 @@ docker build -t "$IMAGE_NAME" "$REPO_ROOT"
 echo "==> Preparando carpeta de uploads persistente en '$UPLOADS_HOST_PATH'..."
 mkdir -p "$UPLOADS_HOST_PATH"
 
+# La imagen wordpress:php8.3-apache ejecuta PHP como www-data (UID:GID 33:33).
+# El bind mount respeta los permisos del host, así que sin este ajuste WordPress
+# no puede escribir en uploads/ (subida de medios, thumbnails, etc.) en producción.
+if [[ "$(id -u)" -eq 0 ]]; then
+  chown -R 33:33 "$UPLOADS_HOST_PATH"
+else
+  echo "Aviso: no se ejecuta como root, no se puede hacer 'chown 33:33 $UPLOADS_HOST_PATH'." >&2
+  echo "       Ejecuta 'sudo chown -R 33:33 $UPLOADS_HOST_PATH' o el contenedor no podrá escribir en uploads/." >&2
+fi
+
 if docker ps -a --format '{{.Names}}' | grep -Fxq "$CONTAINER_NAME"; then
   echo "==> Deteniendo y eliminando contenedor previo '$CONTAINER_NAME'..."
   docker rm -f "$CONTAINER_NAME" >/dev/null
