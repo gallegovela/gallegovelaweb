@@ -88,6 +88,22 @@ docker compose up -d
 
 WordPress queda disponible en `http://localhost:8080`. La base de datos (MySQL 8) y las credenciales se configuran vía `.env` (ver `.env.example`).
 
+## Producción
+
+En producción no se usa docker-compose: el contenedor se arranca directamente con
+`docker` mediante `scripts/deploy-prod.sh`, conectando con una base de datos MySQL
+externa/gestionada.
+
+```bash
+cp .env.production.example .env.production   # rellenar credenciales reales
+./scripts/deploy-prod.sh
+```
+
+Las variables de conexión a la base de datos (host, nombre, usuario, contraseña,
+prefijo de tablas) y la configuración del contenedor (puerto, nombre de imagen/
+contenedor, carpeta de uploads persistente) se leen de `.env.production` (ver
+`.env.production.example`). El fichero real no se versiona.
+
 ## Secciones del sitio
 
 - **Home** — hero, "qué hago", stack tecnológico, proyectos destacados, últimas entradas de blog.
