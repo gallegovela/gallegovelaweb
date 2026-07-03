@@ -20,6 +20,9 @@ $gv_github   = esc_url( get_theme_mod( 'gallegovela_footer_github', '' ) );
 			<?php endif; ?>
 		</a>
 
+		<p class="gv-footer__name">Manuel Jesús Gallego Vela</p>
+		<p class="gv-footer__role">Ingeniería del Software, Cloud, DevOps, IA</p>
+
 		<?php if ( $gv_linkedin || $gv_twitter || $gv_github ) : ?>
 		<div class="gv-footer__rrss">
 			<?php if ( $gv_linkedin ) : ?>
@@ -62,6 +65,7 @@ $gv_github   = esc_url( get_theme_mod( 'gallegovela_footer_github', '' ) );
 
 	<div class="gv-footer__col">
 		<h3 class="gv-footer__col-title"><?php esc_html_e( 'Contacto', 'gallegovela-theme' ); ?></h3>
+		<p class="gv-footer__address"><?php esc_html_e( 'Centro Tecnológico FEVAL, Paseo de FEVAL, s/n, 06400 Don Benito (Badajoz - España)', 'gallegovela-theme' ); ?></p>
 		<a class="gv-button gv-button--primary" href="<?php echo esc_url( home_url( '/contacto' ) ); ?>">
 			<?php esc_html_e( 'Hablemos', 'gallegovela-theme' ); ?>
 		</a>
