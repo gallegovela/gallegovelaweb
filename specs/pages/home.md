@@ -9,6 +9,7 @@ El título se presenta como h2 y lleva el estilo "home-section-title".
 El sobretítulo va encima del título, y ambos no deben superar el 50% de ancho de la sección.
 En caso de haber Texto en la sección, se presenta en la parte derecha, a la altura del título. Alineación derecha y no debe superar el 50% del ancho de la sección.
 En caso de existir un enlace, se presenta en la parte derecha de la sección, como enlace y a la altura del título. Alineación derecha.  Ancho máximo: 50% de la sección.
+El texto del enlace va siempre en mayúsculas (`text-transform: uppercase`), con `font-size: 0.8rem` y `letter-spacing: 0.1em`, y precedido de una flecha apuntando a la derecha ("→").
 Si hay enlace y texto, en primer lugar va el enlace y debajo el texto.  En caso de existir sólo texto, tiene que tener un margin superior que haga que el texto se muestre a la misma altura del título, salvando el hueco del overtitle.
 
 # Estructura de secciones (Home)

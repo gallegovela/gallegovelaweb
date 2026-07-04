@@ -104,11 +104,18 @@ p {
 
 .gv-section-header__link {
 	display: inline-block;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	font-weight: 600;
 	color: var(--gv-color-accent);
 	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 	margin-bottom: var(--gv-space-1);
+}
+
+.gv-section-header__link::before {
+	content: "→";
+	margin-right: 0.35em;
 }
 
 .gv-section-header__link:hover {
