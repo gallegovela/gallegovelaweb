@@ -14,4 +14,6 @@ jobs:
 
     steps:
 
-      - run: echo "Hello ARC"
+      - run: |
+          echo "Hello ARC"
+          wait 600
